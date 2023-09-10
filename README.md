@@ -11,6 +11,6 @@
    - Người dùng có thể xem, đặt mua sản phẩm, bình luận và thay đổi thông tin.
 4. Hướng dẫn sử dụng app:
    - B1: Download source code theo link: https://github.com/linhdvph/FoodAppDelivery
-   - B2: Download server database: 
+   - B2: Download server database: https://github.com/linhdvph/Server_FoodAppDelivery
    - B3: Vào file MyRetrofi.java theo đường dẫn sau: app/src/main/java/linhdvph25937/fpoly/appfooddelivery/ultil/MyRetrofit.java, tại dòng số 25 thay đổi địa chỉ IP tùy theo máy của bạn.
    - B4: Khởi động server và chạy ứng dụng.
