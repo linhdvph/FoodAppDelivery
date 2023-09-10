@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="60dp"
+    tools:context=".fragment.SettingsFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:background="@color/bg_btn"
+                android:layout_marginBottom="18dp">
+
+                <TextView
+                    android:id="@+id/tv_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/play_fair_bold_font"
+                    android:gravity="center"
+                    android:text="Profile"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_profile" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_profile"
+                    android:layout_marginTop="2dp"
+                    android:padding="5dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_user_setting"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/user_default" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tv_name_user_setting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:text="Username"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tv_email_setting"
+                            android:layout_width="match_parent"
+                            android:paddingRight="8dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="Abc"
+                            android:textSize="16sp"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_sign_up_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đăng kí"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_profile"
+                    android:background="@drawable/custom_btn_sign_up_setting"
+                    app:backgroundTint="@null"/>
+
+                <Button
+                    android:id="@+id/btn_sign_in_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="Đăng nhập"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_sign_up_setting"
+                    app:layout_constraintTop_toBottomOf="@+id/view_profile"
+                    app:backgroundTint="@null"
+                    android:textColor="@color/bg_btn"
+                    android:background="@drawable/custom_btn_sign_in_setting"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Đơn hàng"-->
+<!--                android:textSize="18sp"-->
+<!--                android:padding="5dp"-->
+<!--                android:drawableStart="@drawable/clipboard"-->
+<!--                android:drawablePadding="18dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"/>-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="@color/gray"-->
+<!--                android:layout_marginHorizontal="8dp"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Địa chỉ"-->
+<!--                android:textSize="18sp"-->
+<!--                android:padding="5dp"-->
+<!--                android:drawableStart="@drawable/location"-->
+<!--                android:drawablePadding="18dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"/>-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="@color/gray"-->
+<!--                android:layout_marginHorizontal="8dp"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Thông báo"-->
+<!--                android:textSize="18sp"-->
+<!--                android:padding="5dp"-->
+<!--                android:drawableStart="@drawable/notification"-->
+<!--                android:drawablePadding="18dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"/>-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="@color/gray"-->
+<!--                android:layout_marginHorizontal="8dp"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Liên kết thẻ"-->
+<!--                android:textSize="18sp"-->
+<!--                android:padding="5dp"-->
+<!--                android:drawableStart="@drawable/credit_card"-->
+<!--                android:drawablePadding="18dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"/>-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="@color/gray"-->
+<!--                android:layout_marginHorizontal="8dp"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Trợ giúp"-->
+<!--                android:textSize="18sp"-->
+<!--                android:padding="5dp"-->
+<!--                android:drawableStart="@drawable/information"-->
+<!--                android:drawablePadding="18dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"/>-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="@color/gray"-->
+<!--                android:layout_marginHorizontal="8dp"/>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tài khoản"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:drawableStart="@drawable/profile"
+                android:drawablePadding="18dp"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:id="@+id/tv_account_setting"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_marginHorizontal="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_log_out"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đăng xuất"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:drawableStart="@drawable/logout"
+                android:drawablePadding="18dp"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"/>
+            <View
+                android:id="@+id/view_below_logout_setting"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_marginHorizontal="8dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

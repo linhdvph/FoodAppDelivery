@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AppFoodDelivery</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_board1">Choose Your Favorite Food</string>
+    <string name="title_board2">Delicious Food Menu</string>
+    <string name="title_board3">We Have 9000+ Review On Our App</string>
+    <string name="text_board1">Vegetarian Meat / Dishes Pasta Dishes / Salads / Desserts / Soups / Seafood</string>
+    <string name="text_board2">Seafood / Soups / Dishes Desserts / Vegetarian Meat / Fast Food</string>
+    <string name="text_board3">We have 6000+ User Reviews, You Can Check in The Application Store</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

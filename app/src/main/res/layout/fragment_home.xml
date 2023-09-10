@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment"
+    android:layout_marginBottom="60dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/imgAvatarHome"
+            android:layout_width="1dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:src="@drawable/user_default"
+            app:civ_border_color="@color/gray"
+            app:civ_border_width="2dp" />
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            android:paddingLeft="8dp">
+
+            <TextView
+                android:id="@+id/tvUsernameHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvAddressHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:paddingRight="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="5dp"
+        android:background="@drawable/custom_bg_search_home"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:drawableStart="@drawable/ic_baseline_search_24"
+            android:drawablePadding="18dp"
+            android:hint="Nhập từ khóa cần tìm..."
+            android:padding="13dp"
+            android:gravity="center_vertical"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginVertical="4dp"
+            android:background="#ccc" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:padding="5dp"
+            android:src="@drawable/edit" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_admin_home_fragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_all_product_admin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="8dp" />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/btn_show_dialog_add_product"
+            app:backgroundTint="@null"
+            android:text="+"
+            android:textSize="30sp"
+            android:layout_gravity="right|bottom"
+            android:layout_margin="8dp"
+            android:background="@drawable/custom_btn_add_product_by_admin"/>
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#F3F3F3"
+        android:id="@+id/scrollview_user"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/image_slider"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                app:iss_auto_cycle="true"
+                app:iss_delay="3000"
+                app:iss_period="3000"
+                android:background="@color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Đánh giá cao"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginVertical="8dp"
+                android:layout_marginLeft="8dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHighRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:background="@color/white"/>
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout_home_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabMode="fixed"
+                app:tabGravity="fill"
+                android:layout_marginTop="8dp"
+                app:tabSelectedTextColor="@color/bg_btn"
+                app:tabIndicatorColor="@color/bg_btn"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager2_home_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

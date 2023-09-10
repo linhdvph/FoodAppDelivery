@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AccountActivity"
+    android:background="@color/bg_detail_food"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp"
+            android:background="@color/bg_white2">
+
+            <ImageView
+                android:id="@+id/img_arrow_back_account"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_baseline_arrow_back_red_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:text="Thiết lập tài khoản"
+                android:textColor="@color/bg_btn"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tài khoản"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Hồ sơ"-->
+<!--                android:textSize="18sp"-->
+<!--                android:padding="5dp"-->
+<!--                android:drawablePadding="18dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"/>-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="@color/bg_detail_food"-->
+<!--                android:layout_marginHorizontal="8dp"/>-->
+
+            <TextView
+                android:id="@+id/tv_change_name_user_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tên người dùng"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:drawablePadding="18dp"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_detail_food"
+                android:layout_marginHorizontal="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_change_address_account_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Địa chỉ"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:drawablePadding="18dp"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_detail_food"
+                android:layout_marginHorizontal="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_change_phone_number_account_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Điện thoại"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:drawablePadding="18dp"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_detail_food"
+                android:layout_marginHorizontal="8dp"/>
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Tài khoản mạng xã hội"-->
+<!--                android:textSize="18sp"-->
+<!--                android:padding="5dp"-->
+<!--                android:drawablePadding="18dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"/>-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="@color/bg_detail_food"-->
+<!--                android:layout_marginHorizontal="8dp"/>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đổi mật khẩu"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:drawablePadding="18dp"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:id="@+id/tv_change_passwd_account"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_detail_food"
+                android:layout_marginHorizontal="8dp"/>
+        </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.VerifyPhoneNumberActivity"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp"
+            android:background="@color/bg_white2">
+
+            <ImageView
+                android:id="@+id/img_arrow_back_verify_phone_number"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_baseline_arrow_back_red_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:text="Verify Phone Number"
+                android:textColor="@color/bg_btn"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verification code (OTP) has been sent via text message of"
+            android:layout_marginTop="18dp"
+            android:layout_marginHorizontal="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(+84) 387584561"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:id="@+id/tv_phone_verification"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginVertical="18dp"
+            android:layout_marginHorizontal="8dp">
+
+            <EditText
+                android:id="@+id/ed_num1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1666"
+                android:layout_marginHorizontal="8dp"
+                android:maxLength="1"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                tools:ignore="LabelFor"
+                android:textAlignment="center"/>
+            <EditText
+                android:id="@+id/ed_num2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1666"
+                android:layout_marginHorizontal="8dp"
+                android:maxLength="1"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                tools:ignore="LabelFor"
+                android:textAlignment="center"/>
+            <EditText
+                android:id="@+id/ed_num3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1666"
+                android:layout_marginHorizontal="8dp"
+                android:maxLength="1"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                tools:ignore="LabelFor"
+                android:textAlignment="center"/>
+            <EditText
+                android:id="@+id/ed_num4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1666"
+                android:layout_marginHorizontal="8dp"
+                android:maxLength="1"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                tools:ignore="LabelFor"
+                android:textAlignment="center"/>
+            <EditText
+                android:id="@+id/ed_num5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1666"
+                android:layout_marginHorizontal="8dp"
+                android:maxLength="1"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                tools:ignore="LabelFor"
+                android:textAlignment="center"/>
+            <EditText
+                android:id="@+id/ed_num6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1666"
+                android:layout_marginHorizontal="8dp"
+                android:maxLength="1"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                tools:ignore="LabelFor"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm"
+            android:id="@+id/btn_confirm_verification_id"
+            app:backgroundTint="@null"
+            android:background="@drawable/custom_btn_get_started"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="8dp"
+            android:textSize="18sp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resend Code!"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/blue_white"
+                android:id="@+id/tv_re_send_code"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wait: "
+                android:layout_marginHorizontal="8dp"
+                android:textSize="20sp"
+                android:id="@+id/tv_count_down_time"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

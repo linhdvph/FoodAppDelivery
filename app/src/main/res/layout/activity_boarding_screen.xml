@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.BoardingScreen">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvSkip"
+        android:text="Skip"
+        android:textSize="30sp"
+        android:layout_alignParentRight="true"
+        android:padding="8dp"
+        android:textColor="#000"
+        android:fontFamily="@font/play_fair_bold_font"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewPager2"
+        android:layout_below="@id/tvSkip"
+        android:layout_above="@id/tvNext"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvNext"
+        android:text="Next >"
+        android:textSize="25sp"
+        android:textColor="#000"
+        android:fontFamily="@font/play_fair_medium_font"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:padding="8dp"/>
+
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dots_indicator"
+        android:layout_alignParentBottom="true"
+        app:dotsColor="#EFE7E7"
+        app:dotsCornerRadius="8dp"
+        app:dotsSize="16dp"
+        app:dotsSpacing="4dp"
+        app:dotsWidthFactor="2.5"
+        app:selectedDotColor="@color/bg_btn"
+        app:progressMode="true"
+        android:padding="8dp"
+        android:layout_margin="5dp"/>
+</RelativeLayout>

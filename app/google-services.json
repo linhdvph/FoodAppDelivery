@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "171863906586",
+    "project_id": "assigmentadnetworking",
+    "storage_bucket": "assigmentadnetworking.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171863906586:android:631513b2eb86ee61cef4a3",
+        "android_client_info": {
+          "package_name": "linhdvph25937.fpoly.appfooddelivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "171863906586-mjnebn877riqqjhrk9u2aurvi7jjsnti.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "linhdvph25937.fpoly.appfooddelivery",
+            "certificate_hash": "0879bad1de5d97e7c0b9f55b7f9a5d13e540cb58"
+          }
+        },
+        {
+          "client_id": "171863906586-djc3kd5a829olp1julj4omoo36tlfqm3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7e-8Gx94dZnx07AMdevX8MUCXTGIHn0E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "171863906586-djc3kd5a829olp1julj4omoo36tlfqm3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

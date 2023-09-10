@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_detail_food">
+
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white2"
+        android:orientation="horizontal"
+        android:paddingVertical="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_arrow_back_update_product_by_admin"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:src="@drawable/ic_baseline_arrow_back_red_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:text="Sửa sản phẩm"
+            android:textColor="@color/bg_btn"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
+        app:layout_constraintVertical_bias="0.022">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tên sản phẩm"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginVertical="8dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tên..."
+                android:background="@drawable/custom_bg_edit_text"
+                android:padding="8dp"
+                android:id="@+id/ed_name_product_update"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loại sản phẩm"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginVertical="8dp"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_type_product_in_update_product"
+                android:background="@drawable/custom_bg_edit_text"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Giá sản phẩm"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginVertical="8dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Giá..."
+                android:background="@drawable/custom_bg_edit_text"
+                android:padding="8dp"
+                android:id="@+id/ed_price_product_update"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Địa chỉ"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginVertical="8dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Địa chỉ..."
+                android:background="@drawable/custom_bg_edit_text"
+                android:padding="8dp"
+                android:id="@+id/ed_address_product_update"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hình ảnh"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginVertical="8dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ảnh (link url)"
+                android:background="@drawable/custom_bg_edit_text"
+                android:padding="8dp"
+                android:id="@+id/ed_image_product_update"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_marginVertical="8dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Thời gian"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:layout_marginVertical="8dp"
+                        android:layout_marginLeft="5dp"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Thời gian"
+                        android:background="@drawable/custom_bg_edit_text"
+                        android:padding="8dp"
+                        android:id="@+id/ed_time_product_update"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Calo"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:layout_marginVertical="8dp"
+                        android:layout_marginLeft="5dp"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Calo..."
+                        android:background="@drawable/custom_bg_edit_text"
+                        android:padding="8dp"
+                        android:id="@+id/ed_energy_product_update"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Đánh giá"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:layout_marginVertical="8dp"
+                        android:layout_marginLeft="5dp"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Đánh giá"
+                        android:background="@drawable/custom_bg_edit_text"
+                        android:padding="8dp"
+                        android:id="@+id/ed_rating_product_update"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mô tả"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginVertical="8dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mô tả..."
+                android:minHeight="80dp"
+                android:background="@drawable/custom_bg_edit_text"
+                android:padding="8dp"
+                android:id="@+id/ed_descriptions_product_update" />
+
+            <Button
+                android:id="@+id/btn_update_product_by_admin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:text="Sửa"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="8dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/custom_btn_get_started"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
