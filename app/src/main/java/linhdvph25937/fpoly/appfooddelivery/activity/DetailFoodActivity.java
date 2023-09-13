@@ -80,7 +80,8 @@ public class DetailFoodActivity extends AppCompatActivity {
                                 quantity += listCart.get(i).getQuantityOrder();
                             }
                             quantityInCart = quantity;
-                            Toast.makeText(DetailFoodActivity.this, "Quantity Order: "+quantity, Toast.LENGTH_SHORT).show();
+                            tvNumberInIconShoppingCart.setText(quantityInCart+"");
+                            tvNumberInIconShoppingCart.setVisibility(quantityInCart > 0 ? View.VISIBLE : View.GONE);
                         }
                     }
 
@@ -141,7 +142,11 @@ public class DetailFoodActivity extends AppCompatActivity {
                                 @Override
                                 public void onResponse(Call<Cart> call, Response<Cart> response) {
                                     if (response.body() != null){
+                                        int quantityOrder = Integer.parseInt(tvNumber.getText().toString());
                                         Toast.makeText(DetailFoodActivity.this, "Đã thêm vào giỏ hàng.", Toast.LENGTH_SHORT).show();
+                                        quantityInCart+=quantityOrder;
+                                        tvNumberInIconShoppingCart.setText(quantityInCart+"");
+                                        tvNumberInIconShoppingCart.setVisibility(quantityInCart > 0 ? View.VISIBLE : View.GONE);
                                     }else{
                                         Toast.makeText(DetailFoodActivity.this, "Không thể thêm vào giỏ hàng.", Toast.LENGTH_SHORT).show();
                                     }
@@ -182,13 +187,10 @@ public class DetailFoodActivity extends AppCompatActivity {
         tvRating.setText(obj.getRating()+"");
         tvCalo.setText(obj.getEnergy()+"");
         tvTime.setText(obj.getTime()+" min");
-        tvNumberInIconShoppingCart.setText(quantityInCart+"");
-        tvNumberInIconShoppingCart.setVisibility(quantityInCart > 0 ? View.VISIBLE : View.GONE);
         tvAddition.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 numberOder=numberOder+1;
-                quantityInCart+=numberOder;
                 if (numberOder == 0){
                     tvSubtraction.setVisibility(View.INVISIBLE);
                     tvAddition.setVisibility(View.VISIBLE);
@@ -206,7 +208,6 @@ public class DetailFoodActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 numberOder=numberOder-1;
-                quantityInCart-=numberOder;
                 if (numberOder == 0){
                     tvSubtraction.setVisibility(View.INVISIBLE);
                     tvAddition.setVisibility(View.VISIBLE);
