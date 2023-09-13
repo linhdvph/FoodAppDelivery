@@ -22,7 +22,7 @@ import retrofit2.http.Path;
 public interface MyRetrofit {
     //http://192.168.0.11:3000/api
     MyRetrofit retrofit = new Retrofit.Builder()
-            .baseUrl("http://192.168.0.10:3000/")
+            .baseUrl("http://192.168.137.1:3000/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(MyRetrofit.class);

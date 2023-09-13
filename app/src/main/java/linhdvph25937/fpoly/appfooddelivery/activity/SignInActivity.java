@@ -110,7 +110,7 @@ public class SignInActivity extends AppCompatActivity {
                     editor.commit();
                     startActivity(intent);
                 }else{
-                    Toast.makeText(SignInActivity.this, "Can't sign in", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignInActivity.this, "Thông tin không chính xác", Toast.LENGTH_SHORT).show();
                 }
             }
 

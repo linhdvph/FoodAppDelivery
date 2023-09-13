@@ -27,6 +27,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import linhdvph25937.fpoly.appfooddelivery.R;
+import linhdvph25937.fpoly.appfooddelivery.adapter.CartAdapter;
 import linhdvph25937.fpoly.appfooddelivery.adapter.CommentAdapter;
 import linhdvph25937.fpoly.appfooddelivery.fragment.CartFragment;
 import linhdvph25937.fpoly.appfooddelivery.model.Cart;
@@ -40,7 +41,8 @@ import retrofit2.Response;
 
 public class DetailFoodActivity extends AppCompatActivity {
     private Button btnAddToCart;
-    private TextView tvSubtraction, tvNumber, tvAddition, tvTitle, tvPrice, tvDescription, tvRating, tvCalo, tvTime;
+    private TextView tvSubtraction, tvNumber, tvAddition, tvTitle, tvPrice, tvDescription, tvRating;
+    private TextView tvCalo, tvTime, tvNumberInIconShoppingCart;
     private ImageView imgFood, imgArrowBack, imgToCart;
     private Food obj;
     private int numberOder = 0;
@@ -49,6 +51,8 @@ public class DetailFoodActivity extends AppCompatActivity {
     private RecyclerView rvComment;
     private ArrayList<Comment> listComment;
     private CommentAdapter commentAdapter;
+    private ArrayList<Cart> listCart;
+    private int quantityInCart = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,10 +60,36 @@ public class DetailFoodActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail_food);
         initialView();
         onBack();
+        getListInCart();
         goToCart();
         getBundle();
         addToCart();
         getListComment();
+    }
+
+    private void getListInCart() {
+        String idUser = sharedPreferences.getString("id_user_login","");
+        MyRetrofit.retrofit.getListCartByIdUser(idUser)
+                .enqueue(new Callback<Receiver>() {
+                    @Override
+                    public void onResponse(Call<Receiver> call, Response<Receiver> response) {
+                        if (response.body() != null){
+                            int quantity = 0;
+                            listCart = response.body().getListCart();
+                            for (int i = 0; i < listCart.size(); i++) {
+                                quantity += listCart.get(i).getQuantityOrder();
+                            }
+                            quantityInCart = quantity;
+                            Toast.makeText(DetailFoodActivity.this, "Quantity Order: "+quantity, Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<Receiver> call, Throwable t) {
+                        Log.e(TAG, "onFailure: " + t);
+                        Toast.makeText(DetailFoodActivity.this, "Lỗi server khi lấy danh sách sản phẩm trong giỏ hàng theo id người dùng", Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 
     private void getListComment() {
@@ -152,10 +182,13 @@ public class DetailFoodActivity extends AppCompatActivity {
         tvRating.setText(obj.getRating()+"");
         tvCalo.setText(obj.getEnergy()+"");
         tvTime.setText(obj.getTime()+" min");
+        tvNumberInIconShoppingCart.setText(quantityInCart+"");
+        tvNumberInIconShoppingCart.setVisibility(quantityInCart > 0 ? View.VISIBLE : View.GONE);
         tvAddition.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 numberOder=numberOder+1;
+                quantityInCart+=numberOder;
                 if (numberOder == 0){
                     tvSubtraction.setVisibility(View.INVISIBLE);
                     tvAddition.setVisibility(View.VISIBLE);
@@ -173,6 +206,7 @@ public class DetailFoodActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 numberOder=numberOder-1;
+                quantityInCart-=numberOder;
                 if (numberOder == 0){
                     tvSubtraction.setVisibility(View.INVISIBLE);
                     tvAddition.setVisibility(View.VISIBLE);
@@ -200,6 +234,7 @@ public class DetailFoodActivity extends AppCompatActivity {
         tvRating = findViewById(R.id.rating_detail_food);
         tvCalo = findViewById(R.id.energy_detail_food);
         tvTime = findViewById(R.id.time_detail_food);
+        tvNumberInIconShoppingCart = findViewById(R.id.tv_number_in_icon_shopping_cart);
         imgFood = findViewById(R.id.img_detail_food);
         imgArrowBack = findViewById(R.id.img_arrow_back);
         imgToCart = findViewById(R.id.img_cart_detail_food);
